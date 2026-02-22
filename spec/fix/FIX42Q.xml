@@ -363,6 +363,7 @@
     </message>
     <message name="RequestForPositionsAck" msgtype="AO" msgcat="app">
       <field name="PosMaintRptID" required="Y" />
+      <field name="PosReqID" required="N" />
       <field name="PosReqType" required="N" />
       <field name="PosReqResult" required="Y" />
       <field name="PosReqStatus" required="Y" />
@@ -371,9 +372,10 @@
     </message>
     <message name="PositionReport" msgtype="AP" msgcat="app">
       <field name="PosMaintRptID" required="Y" />
+      <field name="PosReqID" required="N" />
       <field name="PosReqType" required="N" />
       <field name="UnsolicitedIndicator" required="N" />
-      <field name="ClearingBusinessDate" required="Y" />
+      <field name="ClearingBusinessDate" required="N" />
       <component name="Parties" required="Y" />
       <group name="NoPositions" required="Y">
         <field name="PosType" required="N" />
@@ -459,7 +461,7 @@
   </messages>
   <components>
     <component name="Instrument">
-      <field name="Symbol" required="Y" />
+      <field name="Symbol" required="N" />
       <field name="SecurityIDSource" required="Y" />
       <field name="SecurityID" required="Y" />
       <field name="ExDestination" required="N" />
@@ -1059,18 +1061,7 @@
       <value enum="2" description="BACKGROUND" />
     </field>
     <field number="62" name="ValidUntilTime" type="UTCTIMESTAMP" />
-    <field number="63" name="SettlType" type="CHAR">
-      <value enum="0" description="REGULAR" />
-      <value enum="1" description="CASH" />
-      <value enum="2" description="NEXT_DAY" />
-      <value enum="3" description="T_PLUS_2" />
-      <value enum="4" description="T_PLUS_3" />
-      <value enum="5" description="T_PLUS_4" />
-      <value enum="6" description="FUTURE" />
-      <value enum="7" description="WHEN_AND_IF_ISSUED" />
-      <value enum="8" description="SELLERS_OPTION" />
-      <value enum="9" description="T_PLUS_5" />
-    </field>
+    <field number="63" name="SettlType" type="STRING"/>
     <field number="64" name="SettlDate" type="LOCALMKTDATE" />
     <field number="65" name="SymbolSfx" type="STRING">
       <value enum="WI" description="WHEN_ISSUED" />
@@ -2879,27 +2870,7 @@
     <field number="700" name="ReversalIndicator" type="BOOLEAN" />
     <field number="701" name="YieldCalcDate" type="LOCALMKTDATE" />
     <field number="702" name="NoPositions" type="NUMINGROUP" />
-    <field number="703" name="PosType" type="STRING">
-      <value enum="TQ" description="TRANSACTION_QUANTITY" />
-      <value enum="IAS" description="INTRA_SPREAD_QTY" />
-      <value enum="IES" description="INTER_SPREAD_QTY" />
-      <value enum="FIN" description="END_OF_DAY_QTY" />
-      <value enum="SOD" description="START_OF_DAY_QTY" />
-      <value enum="EX" description="OPTION_EXERCISE_QTY" />
-      <value enum="AS" description="OPTION_ASSIGNMENT" />
-      <value enum="TX" description="TRANSACTION_FROM_EXERCISE" />
-      <value enum="TA" description="TRANSACTION_FROM_ASSIGNMENT" />
-      <value enum="PIT" description="PIT_TRADE_QTY" />
-      <value enum="TRF" description="TRANSFER_TRADE_QTY" />
-      <value enum="ETR" description="ELECTRONIC_TRADE_QTY" />
-      <value enum="ALC" description="ALLOCATION_TRADE_QTY" />
-      <value enum="PA" description="ADJUSTMENT_QTY" />
-      <value enum="ASF" description="AS_OF_TRADE_QTY" />
-      <value enum="DLV" description="DELIVERY_QTY" />
-      <value enum="TOT" description="TOTAL_TRANSACTION_QTY" />
-      <value enum="XM" description="CROSS_MARGIN_QTY" />
-      <value enum="SPL" description="INTEGRAL_SPLIT" />
-    </field>
+    <field number="703" name="PosType" type="STRING"/>
     <field number="704" name="LongQty" type="QTY" />
     <field number="705" name="ShortQty" type="QTY" />
     <field number="706" name="PosQtyStatus" type="INT">

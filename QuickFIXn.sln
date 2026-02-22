@@ -48,6 +48,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickFix.FIXT11", "Messages
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AcceptanceTest", "AcceptanceTest\AcceptanceTest.csproj", "{A6E267D7-CF1E-4C28-BB72-8F004E4375FC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickFix.FIX42SP1", "Messages\FIX42SP1\QuickFix.FIX42SP1.csproj", "{EC50604C-6185-4CE9-AEAA-6EEBD27AE939}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -192,6 +194,14 @@ Global
 		{A6E267D7-CF1E-4C28-BB72-8F004E4375FC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A6E267D7-CF1E-4C28-BB72-8F004E4375FC}.Release|x64.ActiveCfg = Release|Any CPU
 		{A6E267D7-CF1E-4C28-BB72-8F004E4375FC}.Release|x64.Build.0 = Release|Any CPU
+		{EC50604C-6185-4CE9-AEAA-6EEBD27AE939}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC50604C-6185-4CE9-AEAA-6EEBD27AE939}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC50604C-6185-4CE9-AEAA-6EEBD27AE939}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{EC50604C-6185-4CE9-AEAA-6EEBD27AE939}.Debug|x64.Build.0 = Debug|Any CPU
+		{EC50604C-6185-4CE9-AEAA-6EEBD27AE939}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC50604C-6185-4CE9-AEAA-6EEBD27AE939}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC50604C-6185-4CE9-AEAA-6EEBD27AE939}.Release|x64.ActiveCfg = Release|Any CPU
+		{EC50604C-6185-4CE9-AEAA-6EEBD27AE939}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
